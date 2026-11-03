@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amicamiashop · Kozmetikus · 3. kerület</title>
+<meta name="description" content="Amicamiashop kozmetikus szalon a budapesti 3. kerületben, Szentendrei út 89.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rozsa:#b5476b;
+  --rozsa-vilagos:#f7e4ea;
+  --barack:#f6b59b;
+  --sotet:#2d2430;
+  --szoveg:#3b3140;
+  --hatter:#fffaf8;
+  --feher:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Nunito",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--szoveg);background:var(--hatter);line-height:1.6;
+}
+h1,h2,h3{font-family:"Playfair Display",Georgia,"Times New Roman",serif;color:var(--sotet);line-height:1.2}
+a{color:var(--rozsa)}
+.kontener{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* Fejléc */
+header{
+  position:sticky;top:0;z-index:10;background:var(--feher);
+  box-shadow:0 2px 12px rgba(45,36,48,.08);
+}
+header .kontener{display:flex;align-items:center;justify-content:space-between;min-height:64px;flex-wrap:wrap;gap:8px}
+.logo{font-family:"Playfair Display",Georgia,serif;font-size:1.4rem;font-weight:700;color:var(--rozsa);text-decoration:none}
+nav ul{list-style:none;display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:var(--sotet);text-decoration:none;font-weight:600;font-size:.95rem;padding:6px 2px;border-bottom:2px solid transparent}
+nav a:hover,nav a:focus{border-bottom-color:var(--rozsa);outline:none}
+
+/* Hero */
+.hero{
+  background:linear-gradient(135deg,var(--rozsa) 0%,#d9768f 55%,var(--barack) 100%);
+  color:#fff;padding:90px 0 100px;position:relative;overflow:hidden;
+}
+.hero::before,.hero::after{
+  content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.12);
+}
+.hero::before{width:380px;height:380px;right:-120px;top:-120px}
+.hero::after{width:240px;height:240px;left:-80px;bottom:-90px}
+.hero .kontener{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:16px}
+.hero p.szlogen{font-size:1.2rem;opacity:.95;margin-bottom:28px;max-width:460px}
+.gomb{
+  display:inline-block;background:#fff;color:var(--rozsa);font-weight:700;
+  padding:14px 28px;border-radius:999px;text-decoration:none;
+  box-shadow:0 6px 18px rgba(45,36,48,.18);transition:transform .15s;
+}
+.gomb:hover,.gomb:focus{transform:translateY(-2px);outline:none}
+.hero-kep{display:flex;justify-content:center}
+.hero-kep svg{width:100%;max-width:300px;height:auto}
+
+/* Szakaszok */
+section{padding:72px 0}
+section h2{font-size:clamp(1.8rem,3.5vw,2.4rem);text-align:center;margin-bottom:12px}
+.bevezeto{text-align:center;max-width:600px;margin:0 auto 44px;color:#5c5063}
+
+/* Szolgáltatások */
+.kartyak{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.kartya{
+  background:var(--feher);border-radius:18px;padding:30px 26px;
+  box-shadow:0 4px 18px rgba(45,36,48,.07);border-top:4px solid var(--rozsa);
+}
+.kartya .ikon{width:52px;height:52px;margin-bottom:16px}
+.kartya h3{font-size:1.3rem;margin-bottom:8px}
+.kartya p{font-size:.98rem;color:#5c5063;margin-bottom:14px}
+.ar{display:inline-block;background:var(--rozsa-vilagos);color:var(--rozsa);font-weight:700;font-size:.9rem;padding:4px 12px;border-radius:999px}
+
+/* Bemutatkozás */
+.bemutatkozas{background:var(--rozsa-vilagos)}
+.bemutatkozas .kontener{max-width:760px;text-align:center}
+.bemutatkozas p{font-size:1.08rem;margin-bottom:16px;color:#4a4050}
+.velemeny{
+  margin-top:28px;background:#fff;border-radius:16px;padding:22px 26px;
+  font-style:italic;color:#4a4050;text-align:left;
+}
+.velemeny span{display:block;margin-top:10px;font-style:normal;font-weight:700;color:var(--rozsa);font-size:.92rem}
+.minta-jelzes{display:block;font-size:.8rem;color:#8a7f90;margin-top:8px;font-style:normal}
+
+/* Elérhetőség */
+.elerhetoseg-racs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.info{background:var(--feher);border-radius:16px;padding:24px;box-shadow:0 4px 18px rgba(45,36,48,.07)}
+.info .ikon{width:40px;height:40px;margin-bottom:12px}
+.info h3{font-size:1.15rem;margin-bottom:6px}
+.info p,.info a{font-size:1rem;color:#4a4050;text-decoration:none}
+.info a:hover,.info a:focus{text-decoration:underline;outline:none}
+.minta-szoveg{font-size:.82rem;color:#8a7f90;margin-top:6px;display:block}
+.cta-sav{text-align:center;margin-top:40px}
+.cta-sav .gomb{background:var(--rozsa);color:#fff}
+
+/* Lábléc */
+footer{background:var(--sotet);color:#cfc6d4;text-align:center;padding:28px 20px;font-size:.9rem}
+footer .logo{color:#fff;display:inline-block;margin-bottom:6px}
+footer .apro{margin-top:14px;font-size:.8rem;color:#9d93a3}
+
+/* Mobil */
+@media (max-width:820px){
+  .hero .kontener{grid-template-columns:1fr;text-align:center}
+  .hero p.szlogen{margin-left:auto;margin-right:auto}
+  .hero-kep svg{max-width:220px}
+}
+@media (max-width:560px){
+  nav ul{gap:12px;justify-content:center}
+  nav a{font-size:.88rem}
+  .hero{padding:64px 0 72px}
+  section{padding:56px 0}
+  .gomb{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kontener">
+    <a href="#top" class="logo">Amicamiashop</a>
+    <nav aria-label="Főmenü">
+      <ul>
+        <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+        <li><a href="#bemutatkozas">Rólunk</a></li>
+        <li><a href="#elerhetoseg">Elérhetőség</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="kontener">
+      <div>
+        <h1>Természetes szépség, gondos kezekkel</h1>
+        <p class="szlogen">Kozmetikai kezelések a 3. kerületben, egyénre szabva, nyugodt környezetben.</p>
+        <a class="gomb" href="tel:+36206151617">Hívjon most: +36 20 615 1617</a>
+      </div>
+      <div class="hero-kep" aria-hidden="true">
+        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="150" cy="150" r="130" fill="rgba(255,255,255,.15)"/>
+          <circle cx="150" cy="150" r="95" fill="rgba(255,255,255,.22)"/>
+          <path d="M150 70c-22 0-40 18-40 40 0 30 40 80 40 80s40-50 40-80c0-22-18-40-40-40z" fill="#fff"/>
+          <circle cx="150" cy="110" r="14" fill="#b5476b"/>
+          <path d="M90 210c20 12 40 12 60 0s40-12 60 0" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M110 240c14 8 26 8 40 0s26-8 40 0" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" opacity=".7"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <section id="szolgaltatasok">
+    <div class="kontener">
+      <h2>Szolgáltatásaink</h2>
+      <p class="bevezeto">Példa szolgáltatások bemutatása. A tényleges kezelések és árak a valós kínálat alapján módosíthatók.</p>
+
+      <div class="kartyak">
+
+        <article class="kartya">
+          <svg class="ikon" viewBox="0 0 52 52" aria-hidden="true">
+            <circle cx="26" cy="26" r="24" fill="#f7e4ea"/>
+            <path d="M18 34c4-8 6-14 8-20 2 6 4 12 8 20" stroke="#b5476b" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="26" cy="20" r="3" fill="#b5476b"/>
+          </svg>
+          <h3>Arckezelés</h3>
+          <p>Mélytisztítás és hidratálás, a bőrtípusához igazított termékekkel.</p>
+          <span class="ar">Minta ár: 12 000 Ft-tól</span>
+        </article>
+
+        <article class="kartya">
+          <svg class="ikon" viewBox="0 0 52 52" aria-hidden="true">
+            <circle cx="26" cy="26" r="24" fill="#f7e4ea"/>
+            <path d="M16 30h20M20 22h12M22 38h8" stroke="#b5476b" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <h3>Ránctalanító kezelés</h3>
+          <p>Feszesítő és frissítő kezelés, amely a bőr természetes fényét hozza elő.</p>
+          <span class="ar">Minta ár: 18 500 Ft-tól</span>
+        </article>
+
+        <article class="kartya">
+          <svg class="ikon" viewBox="0 0 52 52" aria-hidden="true">
+            <circle cx="26" cy="26" r="24" fill="#f7e4ea"/>
+            <path d="M26 14l3 8 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1z" fill="#b5476b"/>
+          </svg>
+          <h3>Szemöldök és szempilla</h3>
+          <p>Szemöldök formázás, festés és szempilla-hosszabbítás pontos kivitelezéssel.</p>
+          <span class="ar">Minta ár: 6 000 Ft-tól</span>
+        </article>
+
+        <article class="kartya">
+          <svg class="ikon" viewBox="0 0 52 52" aria-hidden="true">
+            <circle cx="26" cy="26" r="24" fill="#f7e4ea"/>
+            <path d="M14 26c4-6 8-6 12 0s8 6 12 0" stroke="#b5476b" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M14 34c4-6 8-6 12 0s8 6 12 0" stroke="#f6b59b" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+          <h3>Relaxációs masszázs</h3>
+          <p>Nyugtató masszázs illóolajokkal, a feszültség oldására és a test felfrissítésére.</p>
+          <span class="ar">Minta ár: 9 500 Ft-tól</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="bemutatkozas" class="bemutatkozas">
+    <div class="kontener">
+      <h2>Rólunk</h2>
+      <p>Az Amicamiashop a budapesti 3. kerületben várja vendégeit kozmetikai kezelésekkel. Hisszük, hogy a jó bőrápolás nem bonyolult: figyelmes tanácsadással, minőségi termékekkel és nyugodt, barátságos környezetben dolgozunk.</p>
+      <p>Minden kezelést a vendég igényeihez igazítunk, hogy mindenki a számára legjobb eredményt érhesse el.</p>
+      <div class="velemeny">
+        „Nagyon kellemes volt a kezelés, és őszintén tanácsoltak, mit érdemes otthon is használni.”
+        <span>Példa vélemény – Kovács Anna</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="elerhetoseg">
+    <div class="kontener">
+      <h2>Elérhetőség</h2>
+      <p class="bevezeto">Keressen minket telefonon, vagy látogasson el hozzánk.</p>
+
+      <div class="elerhetoseg-racs">
+
+        <div class="info">
+          <svg class="ikon" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="19" fill="#f7e4ea"/>
+            <path d="M20 10c-5 0-8 3.5-8 8 0 6 8 13 8 13s8-7 8-13c0-4.5-3-8-8-8z" fill="#b5476b"/>
+            <circle cx="20" cy="18" r="3" fill="#fff"/>
+          </svg>
+          <h3>Cím</h3>
+          <p>1033 Budapest, Szentendrei út 89.</p>
+        </div>
+
+        <div class="info">
+          <svg class="ikon" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="19" fill="#f7e4ea"/>
+            <path d="M14 11l4 1 2 5-2.5 1.5c1 2.5 3 4.5 5.5 5.5l1.5-2.5 5 2 1 4c-.5 1.5-2 2.5-3.5 2.5C17 30.5 9.5 23 9.5 14.5c0-1.5 1-3 2.5-3.5z" fill="#b5476b"/>
+          </svg>
+          <h3>Telefon</h3>
+          <p><a href="tel:+36206151617">+36 20 615 1617</a></p>
+        </div>
+
+        <div class="info">
+          <svg class="ikon" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="19" fill="#f7e4ea"/>
+            <path d="M14 14h12v10H14z" fill="none" stroke="#b5476b" stroke-width="2.5"/>
+            <path d="M14 15l6 5 6-5" stroke="#b5476b" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+          </svg>
+          <h3>E-mail</h3>
+          <p>Az e-mail cím a kapcsolattartó megadása után jelenik meg itt.</p>
+          <span class="minta-szoveg">Minta információ, a tényleges cím még nincs megadva.</span>
+        </div>
+
+        <div class="info">
+          <svg class="ikon" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="19" fill="#f7e4ea"/>
+            <circle cx="20" cy="20" r="9" fill="none" stroke="#b5476b" stroke-width="2.5"/>
+            <path d="M20 14v6l4 2" stroke="#b5476b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          </svg>
+          <h3>Nyitvatartás</h3>
+          <p>Hétfő–péntek: 9:00–18:00<br>Szombat: 9:00–13:00<br>Vasárnap: zárva</p>
+          <span class="minta-szoveg">Minta nyitvatartás, a valós időpontok egyeztetendők.</span>
+        </div>
+
+      </div>
+
+      <div class="cta-sav">
+        <a class="gomb" href="tel:+36206151617">Időpontfoglalás telefonon</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="logo">Amicamiashop</div>
+  <div>1033 Budapest, Szentendrei út 89. · +36 20 615 1617</div>
+  <div class="apro">Bemutató oldal · készítette: Erik</div>
+</footer>
+
+</body>
+</html>
